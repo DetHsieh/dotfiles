@@ -1,0 +1,8 @@
+alias ll="ls -laG"
+alias psm="ps -U $USER"
+
+export EDITOR="vim"
+export LANG="zh_TW.UTF-8"
+
+[[ -s "/etc/bash_completion" ]] && source "/etc/bash_completion"
+[[ -s "/usr/local/share/bash-completion/bash_completion" ]] && source "/usr/local/share/bash-completion/bash_completion"
