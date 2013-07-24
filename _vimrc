@@ -3,6 +3,8 @@ set nocompatible
 set expandtab
 set tabstop=4
 set shiftwidth=4
+set wildmenu            " enhanced command completion
+set wildignore=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
 set listchars=tab:=.,trail:.
 set list
 
