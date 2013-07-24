@@ -1,5 +1,7 @@
 alias ll="ls -laG"
 alias psm="ps -U $USER"
+alias grep='grep --color=auto'
+alias g='grep --color=auto'
 
 export EDITOR="vim"
 export LANG="zh_TW.UTF-8"
