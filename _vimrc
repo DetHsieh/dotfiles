@@ -3,7 +3,8 @@ set nocompatible
 set expandtab
 set tabstop=4
 set shiftwidth=4
-set listchars=tab:>,trail:.
+set listchars=tab:=.,trail:.
+set list
 
 set t_Co=256
 set history=50
@@ -117,7 +118,7 @@ if os == "FreeBSD"
 endif
 
 let g:vundle_default_git_proto = 'git'
-let g:changelog_username = 'Gasol Wu <gasol.wu@gmail.com>'
+let g:changelog_username = 'Det Hsieh <dethsieh@kkbox.com>'
 
 let g:gitgutter_enabled = 0
 
