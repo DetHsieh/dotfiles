@@ -1,6 +1,11 @@
 set nocompatible
 
 set expandtab
+set textwidth=120       " set textwidth and display another background color after 121 column.
+set colorcolumn=+1
+let &colorcolumn=join(range(121,999),",")
+highlight ColorColumn ctermbg=232 guibg=#2c2d27
+
 set tabstop=4
 set shiftwidth=4
 set wildmenu            " enhanced command completion
@@ -12,6 +17,8 @@ set t_Co=256
 set history=50
 set number
 set ruler
+set hidden              " enable multiple modified buffers
+set autowriteall        " Automatically save before commands like :next and :make
 
 set encoding=utf-8
 set fileencoding=utf-8
@@ -24,6 +31,9 @@ set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.i
 
 set incsearch
 set hlsearch
+
+set nobackup            " do not write backup files
+set noswapfile          " do not write .swp files
 
 syntax on
 
@@ -67,6 +77,7 @@ Bundle "honza/snipmate-snippets"
 Bundle 'L9'
 Bundle 'othree/vim-autocomplpop'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'ap/vim-css-color'
 
 nmap <Tab><Tab> <C-W><C-W>
 let mapleader = ","
@@ -75,6 +86,8 @@ let maplocalleader = "\\"
 " ,/ to invert comment on the current line/selection
 nmap <leader>/ :call NERDComment(0, "invert")<cr>
 vmap <leader>/ :call NERDComment(0, "invert")<cr>
+
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 
 " ,t to show tags window
 let Tlist_Show_Menu=1
@@ -110,6 +123,10 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+" Remove tailing spaces
+" http://vim.wikia.com/wiki/Remove_unwanted_spaces
+autocmd BufWritePre * :%s/\s\+$//e
 
 let NERDTreeIgnore=['\~$', '\.lo$', '\.la$', '\.pyc']
 
