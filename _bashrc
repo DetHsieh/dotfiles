@@ -10,7 +10,7 @@ export LANG="zh_TW.UTF-8"
 [[ -s "/etc/bash_completion" ]] && source "/etc/bash_completion"
 [[ -s "/usr/local/share/bash-completion/bash_completion" ]] && source "/usr/local/share/bash-completion/bash_completion"
 
-[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash
+[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash " setup path and load git completion bash
 
 export PAGER=less
 export LESS='-r'

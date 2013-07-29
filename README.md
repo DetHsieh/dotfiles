@@ -9,3 +9,5 @@
 *   .gitconfig
 *   .bash_profile
 *   .bashrc
+
+    *   將git-completion.bash複製到家目錄並改名成.git-completion.bash (若要用其他路徑要跟著修改.bashrc的設定)
