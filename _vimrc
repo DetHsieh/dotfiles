@@ -14,6 +14,8 @@ set listchars=tab:=.,trail:.
 set list
 
 set t_Co=256
+colorscheme molokai
+
 set history=50
 set number
 set ruler
