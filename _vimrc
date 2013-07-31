@@ -64,7 +64,7 @@ Bundle 'tpope/vim-cucumber'
 set wildignore+=*/vim-php/doc/*
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'stephpy/vim-php-cs-fixer'
-Bundle 'gnuchangelog'
+"Bundle 'gnuchangelog'
 Bundle 'sprsquish/thrift.vim'
 Bundle 'fs111/pydoc.vim'
 Bundle 'Efficient-python-folding'
